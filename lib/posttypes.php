@@ -74,7 +74,7 @@ function ffw_port_get_default_labels() {
 	   'singular' => __( 'Portfolio', 'FFW_port' ),
 	   'plural' => __( 'Portfolios', 'FFW_port')
 	);
-	return apply_filters( 'ffw_port_default_portfolios_name', $defaults );
+	return apply_filters( 'ffw_port_default_name', $defaults );
 }
 
 /**
