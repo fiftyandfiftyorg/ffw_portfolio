@@ -54,6 +54,7 @@ function setup_ffw_port_post_types() {
 		'rewrite' 			=> $rewrite,
 		'show_in_nav_menus'	=> true,
 		'map_meta_cap'      => true,
+		'menu_icon'			=> FFW_PORT_PLUGIN_URL . '/assets/img/blue-folder-stand.png',
 		'has_archive' 		=> $archives,
 		'hierarchical' 		=> false,
 		'supports' 			=> apply_filters( 'ffw_port_supports', array( 'title', 'editor', 'thumbnail', 'excerpt' ) ),
