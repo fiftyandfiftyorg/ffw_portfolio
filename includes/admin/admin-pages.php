@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function ffw_port_add_menu_page() {
     global $ffw_port_settings_page;
 
-    $ffw_port_settings_page = add_submenu_page( 'edit.php?post_type=ffw_port', __( 'Settings', 'ffw_port' ), __( 'Settings', 'ffw_port'), 'edit_pages', 'ffw-port-settings', 'ffw_port_settings_page' );
+    $ffw_port_settings_page = add_submenu_page( 'edit.php?post_type=ffw_portfolio', __( 'Settings', 'ffw_port' ), __( 'Settings', 'ffw_port'), 'edit_pages', 'ffw-port-settings', 'ffw_port_settings_page' );
     
 }
 add_action( 'admin_menu', 'ffw_port_add_menu_page', 11 );

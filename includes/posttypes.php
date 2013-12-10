@@ -66,7 +66,7 @@ function setup_ffw_port_post_types() {
         'hierarchical'      => false,
         'supports'          => apply_filters( 'ffw_port_supports', array( 'title', 'editor', 'thumbnail', 'excerpt' ) ),
     );
-    register_post_type( 'ffw_port', apply_filters( 'ffw_port_post_type_args', $port_args ) );
+    register_post_type( 'ffw_portfolio', apply_filters( 'ffw_port_post_type_args', $port_args ) );
     
 }
 add_action( 'init', 'setup_ffw_port_post_types', 1 );
