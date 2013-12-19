@@ -153,6 +153,13 @@ function ffw_port_get_registered_settings() {
                     'size' => 'medium',
                     'std' => ffw_port_get_label_singular()
                 ),
+                'port_disable_link_to_single' => array(
+                    'id' => 'port_disable_link_to_single',
+                    'name' => __( 'Disable Link', 'ffw_port' ),
+                    'desc' => __( 'Disable clicking through to the single detail.', 'ffw_port' ),
+                    'type' => 'checkbox',
+                    'std' => ''
+                ),
             )
         ),
         

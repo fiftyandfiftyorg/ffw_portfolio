@@ -28,3 +28,15 @@ function ffw_port_plugin_action_links( $links, $file ) {
     return $links;
 }
 add_filter( 'plugin_action_links', 'ffw_port_plugin_action_links', 10, 2 );
+
+
+
+function ffw_port_disable_link()
+{
+    global $ffw_port_settings;
+
+   $ffw_port_disable = isset( $ffw_port_settings['port_disable_link_to_single'] ) ? true : false;
+
+   return $ffw_port_disable;
+    
+}
