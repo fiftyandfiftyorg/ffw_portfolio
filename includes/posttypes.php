@@ -28,6 +28,8 @@ function setup_ffw_port_post_types() {
     } else {
         $slug = defined( 'FFW_PORT_SLUG' ) ? FFW_PORT_SLUG : 'portfolio';
     }
+
+    $dashicon = isset( $ffw_port_settings['dash_icons'] ) ? $ffw_port_settings['dash_icons'] : 'dashicons-portfolio';
     
     $rewrite  = defined( 'FFW_PORT_DISABLE_REWRITE' ) && FFW_PORT_DISABLE_REWRITE ? false : array('slug' => $slug, 'with_front' => false);
 
@@ -58,7 +60,7 @@ function setup_ffw_port_post_types() {
         'show_ui'           => true,
         'show_in_menu'      => true,
         'menu_position'     => '34.2',
-        'menu_icon'         => 'dashicons-portfolio',
+        'menu_icon'         => $dashicon,
         'query_var'         => true,
         'rewrite'           => $rewrite,
         'map_meta_cap'      => true,

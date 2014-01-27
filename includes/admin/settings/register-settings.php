@@ -160,6 +160,15 @@ function ffw_port_get_registered_settings() {
                     'type' => 'checkbox',
                     'std' => ''
                 ),
+                'dash_icons' => array(
+                    'id' => 'dash_icons',
+                    'name' => __( 'Label Icon', 'ffw_port' ),
+                    'desc' => __( 'Change the icon using <a href="http://melchoyce.github.io/dashicons/">Dashicons</icons>', 'ffw_port' ),
+                    'type' => 'text',
+                    'size' => 'medium',
+                    'std' => 'dashicons-portfolio'
+                ),
+
             )
         ),
         
