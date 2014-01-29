@@ -168,6 +168,14 @@ function ffw_port_get_registered_settings() {
                     'size' => 'medium',
                     'std' => 'dashicons-portfolio'
                 ),
+                'port_posts_per_page' => array(
+                    'id' => 'port_posts_per_page',
+                    'name' => __( 'Archive Posts Page', 'ffw_staff' ),
+                    'desc' => __( 'Enter the number of posts you would like to display on the archive template'  , 'ffw_staff' ),
+                    'type' => 'text',
+                    'size' => 'small',
+                    'std' => '100'
+                ),
 
             )
         ),

@@ -40,3 +40,24 @@ function ffw_port_disable_link()
    return $ffw_port_disable;
     
 }
+
+
+
+function ffw_port_adjust_posts_per_page( $query ) {
+    
+    global $ffw_port_settings;
+
+    if ( is_admin() || ! $query->is_main_query() )
+        return;
+
+    if ( is_post_type_archive( 'ffw_portfolio' ) ) {
+        // Display 50 posts for a custom post type called 'movie'
+        
+        $ffw_port_posts_per_page = isset( $ffw_port_settings['port_posts_per_page'] ) ? $ffw_port_settings['port_posts_per_page'] : 100;
+        
+        $query->set( 'posts_per_page', $ffw_port_posts_per_page );
+        
+        return;
+    }
+}
+add_action( 'pre_get_posts', 'ffw_port_adjust_posts_per_page', 1 );
