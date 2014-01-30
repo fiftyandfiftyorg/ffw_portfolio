@@ -176,7 +176,6 @@ function ffw_port_get_registered_settings() {
                     'size' => 'small',
                     'std' => '100'
                 ),
-
             )
         ),
         
