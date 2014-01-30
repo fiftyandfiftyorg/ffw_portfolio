@@ -2,7 +2,7 @@
 /**
  * Admin Plugins
  *
- * @package     Donately
+ * @package     Portfolio
  * @subpackage  Admin/Plugins
  * @copyright   Copyright (c) 2013, Fifty and Fifty
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
@@ -42,7 +42,12 @@ function ffw_port_disable_link()
 }
 
 
-
+/**
+ * Allow the ability to set posts_per_page on the archive template from the admin area. BOOM!
+ * 
+ * @param  [type] $query [description]
+ * @return [type]        [description]
+ */
 function ffw_port_adjust_posts_per_page( $query ) {
     
     global $ffw_port_settings;
