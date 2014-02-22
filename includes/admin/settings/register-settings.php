@@ -176,6 +176,13 @@ function ffw_port_get_registered_settings() {
                     'size' => 'small',
                     'std' => '100'
                 ),
+                'disable_archive' => array(
+                    'id' => 'disable_archive',
+                    'name' => __( 'Disable Archives Page', 'ffw_faqs' ),
+                    'desc' => __( 'Check to disable archives page', 'ffw_faqs' ),
+                    'type' => 'checkbox',
+                    'std' => ''
+                ),
             )
         ),
         

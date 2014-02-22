@@ -20,7 +20,15 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  */
 function setup_ffw_port_post_types() {
     global $ffw_port_settings;
-    $archives = defined( 'FFW_PORT_DISABLE_ARCHIVE' ) && FFW_PORT_DISABLE_ARCHIVE ? false : true;
+
+    //$archives = isset( $ffw_port_settings['disable_archive'] ) ? false : true;
+    
+
+    if( !isset( $ffw_port_settings['disable_archive'] ) ) {
+        $archives = true;
+    }else{
+        $archives = false;
+    }
 
     //Check to see if anything is set in the settings area.
     if( !empty( $ffw_port_settings['port_slug'] ) ) {
