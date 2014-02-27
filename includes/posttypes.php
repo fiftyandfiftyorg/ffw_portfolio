@@ -30,6 +30,10 @@ function setup_ffw_port_post_types() {
         $archives = false;
     }
 
+    $exclude_from_search = isset( $ffw_port_settings['exclude_from_search'] ) ? true : false;
+
+
+
     //Check to see if anything is set in the settings area.
     if( !empty( $ffw_port_settings['port_slug'] ) ) {
         $slug = defined( 'FFW_PORT_SLUG' ) ? FFW_PORT_SLUG : $ffw_port_settings['port_slug'];
@@ -42,19 +46,19 @@ function setup_ffw_port_post_types() {
     $rewrite  = defined( 'FFW_PORT_DISABLE_REWRITE' ) && FFW_PORT_DISABLE_REWRITE ? false : array('slug' => $slug, 'with_front' => false);
 
     $port_labels =  apply_filters( 'ffw_port_port_labels', array(
-        'name'              => '%2$s',
-        'singular_name'     => '%1$s',
-        'add_new'           => __( 'Add New', 'ffw_port' ),
-        'add_new_item'      => __( 'Add New %1$s', 'ffw_port' ),
-        'edit_item'         => __( 'Edit %1$s', 'ffw_port' ),
-        'new_item'          => __( 'New %1$s', 'ffw_port' ),
-        'all_items'         => __( 'All %2$s', 'ffw_port' ),
-        'view_item'         => __( 'View %1$s', 'ffw_port' ),
-        'search_items'      => __( 'Search %2$s', 'ffw_port' ),
-        'not_found'         => __( 'No %2$s found', 'ffw_port' ),
-        'not_found_in_trash'=> __( 'No %2$s found in Trash', 'ffw_port' ),
-        'parent_item_colon' => '',
-        'menu_name'         => __( '%2$s', 'ffw_port' )
+        'name'               => '%2$s',
+        'singular_name'      => '%1$s',
+        'add_new'            => __( 'Add New', 'ffw_port' ),
+        'add_new_item'       => __( 'Add New %1$s', 'ffw_port' ),
+        'edit_item'          => __( 'Edit %1$s', 'ffw_port' ),
+        'new_item'           => __( 'New %1$s', 'ffw_port' ),
+        'all_items'          => __( 'All %2$s', 'ffw_port' ),
+        'view_item'          => __( 'View %1$s', 'ffw_port' ),
+        'search_items'       => __( 'Search %2$s', 'ffw_port' ),
+        'not_found'          => __( 'No %2$s found', 'ffw_port' ),
+        'not_found_in_trash' => __( 'No %2$s found in Trash', 'ffw_port' ),
+        'parent_item_colon'  => '',
+        'menu_name'          => __( '%2$s', 'ffw_port' )
     ) );
 
     foreach ( $port_labels as $key => $value ) {
@@ -62,20 +66,21 @@ function setup_ffw_port_post_types() {
     }
 
     $port_args = array(
-        'labels'            => $port_labels,
-        'public'            => true,
-        'publicly_queryable'=> true,
-        'show_ui'           => true,
-        'show_in_menu'      => true,
-        'menu_position'     => '34.2',
-        'menu_icon'         => $dashicon,
-        'query_var'         => true,
-        'rewrite'           => $rewrite,
-        'map_meta_cap'      => true,
-        'has_archive'       => $archives,
-        'show_in_nav_menus' => true,
-        'hierarchical'      => false,
-        'supports'          => apply_filters( 'ffw_port_supports', array( 'title', 'editor', 'thumbnail', 'excerpt' ) ),
+        'labels'              => $port_labels,
+        'public'              => true,
+        'publicly_queryable'  => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'exclude_from_search' => $exclude_from_search,
+        'menu_position'       => '34.2',
+        'menu_icon'           => $dashicon,
+        'query_var'           => true,
+        'rewrite'             => $rewrite,
+        'map_meta_cap'        => true,
+        'has_archive'         => $archives,
+        'show_in_nav_menus'   => true,
+        'hierarchical'        => false,
+        'supports'            => apply_filters( 'ffw_port_supports', array( 'title', 'editor', 'thumbnail', 'excerpt' ) ),
     );
     register_post_type( 'ffw_portfolio', apply_filters( 'ffw_port_post_type_args', $port_args ) );
     

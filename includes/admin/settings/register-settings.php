@@ -183,6 +183,13 @@ function ffw_port_get_registered_settings() {
                     'type' => 'checkbox',
                     'std' => ''
                 ),
+                'exclude_from_search' => array(
+                    'id' => 'exclude_from_search',
+                    'name' => __( 'Exclude from Search', 'ffw_port' ),
+                    'desc' => __( 'Check to exclude from search', 'ffw_port' ),
+                    'type' => 'checkbox',
+                    'std' => ''
+                ),
             )
         ),
         
