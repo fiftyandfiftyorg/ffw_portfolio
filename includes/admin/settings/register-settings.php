@@ -170,16 +170,16 @@ function ffw_port_get_registered_settings() {
                 ),
                 'port_posts_per_page' => array(
                     'id' => 'port_posts_per_page',
-                    'name' => __( 'Archive Posts Page', 'ffw_staff' ),
-                    'desc' => __( 'Enter the number of posts you would like to display on the archive template'  , 'ffw_staff' ),
+                    'name' => __( 'Archive Posts Page', 'ffw_port' ),
+                    'desc' => __( 'Enter the number of posts you would like to display on the archive template'  , 'ffw_port' ),
                     'type' => 'text',
                     'size' => 'small',
                     'std' => '100'
                 ),
                 'disable_archive' => array(
                     'id' => 'disable_archive',
-                    'name' => __( 'Disable Archives Page', 'ffw_faqs' ),
-                    'desc' => __( 'Check to disable archives page', 'ffw_faqs' ),
+                    'name' => __( 'Disable Archives Page', 'ffw_port' ),
+                    'desc' => __( 'Check to disable archives page', 'ffw_port' ),
                     'type' => 'checkbox',
                     'std' => ''
                 ),
